@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('flick.browseFlicks', {
+    .state('flick.browseFlicks', {
     url: '/browse',
     views: {
       'side-menu21': {
@@ -55,8 +55,20 @@ angular.module('app.routes', [])
     templateUrl: 'templates/flick.html',
     abstract:true
   })
+  
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'templates/signup.html',
+    controller: 'signupCtrl'
+  })
 
-$urlRouterProvider.otherwise('/side-menu21/browse')
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
+$urlRouterProvider.otherwise('/login')
 
   
 
