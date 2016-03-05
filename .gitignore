@@ -3,6 +3,7 @@
 
 node_modules/
 platforms/
-plugins/
+plugins/cordova-*
+plugins/ionic-*
 .ntvs_analysis.dat
 FLiCK.njsproj
