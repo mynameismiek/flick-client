@@ -4,14 +4,9 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('loginCtrl', ['$cordovaInAppBrowser', function($scope, $cordovaInAppBrowser) {
-    var options = {
-      location: 'yes',
-      clearcache: 'yes',
-      toolbar: 'no'
-    };
+.controller('loginCtrl', function($scope, $cordovaInAppBrowser) {
 	   $scope.facebookLogin = function(){
-           $cordovaInAppBrowser.open('http://localhost:9000/auth/facebook', '_blank', options)
+           $cordovaInAppBrowser.open('http://localhost:9000/auth/facebook', '_system')
            .then(function(event){
                console.log(event);
            })
@@ -19,7 +14,7 @@ angular.module('app.controllers', [])
                
            })
        } 
-}])
+})
   
 .controller('browseFlicksCtrl', function($scope) {
 
