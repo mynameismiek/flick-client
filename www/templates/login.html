@@ -1,4 +1,4 @@
-<ion-view title="Login">
+<ion-view title="Login to FLiCK">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
             <ion-list>
@@ -11,14 +11,28 @@
                     <input type="password" placeholder="">
                 </label>
             </ion-list>
-            <div class="spacer" style="height: 40px;"></div>
-            <a ng-click="localLogin()" class="button button-positive button-block ">Log in</a>
-            <h5>Log in with:</h5>
-            <div class="button-bar">
-                <button ng-click="facebookLogin()" class="button button-positive button-block  icon ion-social-facebook"></button>
-                <button ng-click="twitterLogin()" class="button button-positive button-block  icon ion-social-twitter"></button>
-            </div>
-            <a ui-sref="signup" class="button button-positive button-clear button-block ">or create an account</a>
+            <div class="spacer" style="height: 16px;"></div>
+            <a ng-click="localLogin()" class="btn btn-block btn-primary">Log in</a>
+            <h5 style="text-align: center; padding: 16px 7px 2px 16px;">or log in with:</h5>
+            <ion-list style="text-align: center;">
+                <label name="google">
+                    <button ng-click="googleLogin()" class="btn btn-block btn-social btn-google">
+                        <span class="fa fa-google"></span> Google
+                    </button>
+                </label>
+                <label name="facebook">
+                    <button ng-click="facebookLogin()" class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> Facebook
+                    </button>
+                </label>
+                <label name="twitter">
+                    <button ng-click="twitterLogin()" class="btn btn-block btn-social btn-twitter">
+                        <span class="fa fa-twitter"></span> Twitter
+                    </button>
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 16px;"></div>
+            <a ui-sref="signup" class="btn btn-block ">or create an account</a>
         </form>
     </ion-content>
 </ion-view>
